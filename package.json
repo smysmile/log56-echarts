@@ -1,10 +1,8 @@
 {
-  "name": "smilecharts",
-  "version": "1.0.2",
-  "description": "A powerful charting by smile",
+  "name": "echarts",
+  "version": "4.2.1",
+  "description": "A powerful charting and visualization library for browser",
   "license": "Apache-2.0",
-  "author": "smile",
-  "private": false,
   "keywords": [
     "visualization",
     "canvas"
@@ -15,8 +13,8 @@
     "url": "https://github.com/apache/incubator-echarts.git"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "prepublish": "node build/build.js --prepublish",
+    "test": "node build/build.js"
   },
   "dependencies": {
     "zrender": "4.0.7"
